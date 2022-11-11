@@ -1,5 +1,4 @@
-import whisper
-
+# TODO: Install and import whisper
 # Look at https://github.com/openai/whisper
 model = whisper.load_model("base")
 
