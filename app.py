@@ -21,3 +21,8 @@ def transcribe_audio(request):
 def match_user(request):
     '''Finds the closest match for a user and opens a chatorom with them.'''
     # TODO: implement this function
+
+@app.route('/check-chatroom-sentiment', methods=['POST'])
+def check_chatroom_sentiment(request):
+    '''Checks the sentiment of the chatroom and returns the sentiment score'''
+    chatroom_id = request.form['chatroom_id']
