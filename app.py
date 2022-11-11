@@ -24,5 +24,5 @@ def match_user(request):
 
 @app.route('/check-chatroom-sentiment', methods=['POST'])
 def check_chatroom_sentiment(request):
-    '''Checks the sentiment of the chatroom and returns the sentiment score'''
+    '''Checks the sentiment of the chatroom and sends notification about sentiment if it is too negative'''
     chatroom_id = request.form['chatroom_id']
