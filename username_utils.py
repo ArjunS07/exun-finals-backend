@@ -4,7 +4,6 @@ adjs = ['adaptable',
         'approachable',
         'competitive',
         'confident',
-        'customer-focused',
         'devoted',
         'educated',
         'efficient',
@@ -15,7 +14,7 @@ adjs = ['adaptable',
         'independent',
         'inquisitive',
         'insightful',
-        'open-minded',
+        'openminded',
         'organized',
         'personable',
         'productive',
@@ -60,7 +59,7 @@ adjs = ['adaptable',
         'proficient',
         'ravishing',
         'romantic',
-        'self-confident',
+        'confident',
         'sensible',
         'sleek',
         'sparkling',
@@ -110,6 +109,7 @@ def random_name():
     while not have_username:
         random_adj = random.sample(adjs, 1)[0]
         username_adj = random.sample(usernames, 1)[0]
-        name = f'{random_adj} {username_adj}'
+        random_num = random.randint(0, 50)
+        name = f'{random_adj.title()}{username_adj.title()}{random_num}'
         have_username = True
-    return name.title()
+    return name

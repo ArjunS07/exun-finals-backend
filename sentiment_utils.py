@@ -1,8 +1,3 @@
-"""
-TODO: Fill in this file
-- Use VADERSentiment to get the sentiment of a string
-
-"""
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 sid_obj = SentimentIntensityAnalyzer()
 
@@ -17,8 +12,6 @@ def get_str_sentiment(text: str) -> float:
 
 def get_avg_list_sentiment(text_list: list) -> float:
     """Returns the average sentiment of all messages in a list using get_str_sentiment"""
-    for x in text_list:
-        sum_sentiment += get_str_sentiment(x)
-
+    sum_sentiment = sum([get_str_sentiment(text) for text in text_list])
     avg = sum_sentiment/len(text_list)
     return avg
