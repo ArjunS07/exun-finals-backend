@@ -16,7 +16,7 @@ def download_audio(url: str) -> str:
     return download_path
 
 model = whisper.load_model("small")
-def transcribe_audio(url: str, target_lang: str = 'en') -> str:
+def get_audio_transcription(url: str, target_lang: str = 'en') -> str:
     path = download_audio(url)
     audio = whisper.load_audio(path)
     audio = whisper.pad_or_trim(audio)
