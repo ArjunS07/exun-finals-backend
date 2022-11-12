@@ -22,20 +22,3 @@ def get_avg_list_sentiment(text_list: list) -> float:
 
     avg = sum_sentiment/len(text_list)
     return avg
-
-
-def get_user_messages(user_id: str) -> list:
-    '''Gets all of the messages sent by a user'''
-    # Don't worry about this for now
-    # TODO: implement this function
-    
-def get_avg_user_sentiment(user_id: str) -> float:
-    '''Gets the averge sentiment of the messages sent by a user'''
-    messages = get_user_messages(user_id)
-    user_sentiment = get_avg_list_sentiment(messages)
-    return user_sentiment
-    
-def should_flag_user(user_id: str) -> bool:
-    '''Returns true if the user's sentiment is too negative'''
-    avg_sentiment = get_avg_user_sentiment(user_id)
-    return avg_sentiment < TOO_NEG_THRESHOLD
