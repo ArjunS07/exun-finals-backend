@@ -106,7 +106,10 @@ import random
 
 def random_name():
     have_username = False
+    name = ''
     while not have_username:
-        random_adj = random.sample(adjs)
-        username_adj = random.sample(usernames)
+        random_adj = random.sample(adjs, 1)[0]
+        username_adj = random.sample(usernames, 1)[0]
         name = f'{random_adj} {username_adj}'
+        have_username = True
+    return name.title()
